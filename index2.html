@@ -9,20 +9,25 @@
     <style>
         @font-face {
             font-family: 'pfont';
-            src: url('Pfont-Bold.ttf');
-            font-weight: 700;
+            src: url('JameJam-Ulter-Light.woff');
+            font-weight: 200;
+        }
+        @font-face {
+            font-family: 'pfont';
+            src: url('JameJam-Light.woff');
+            font-weight: 300;
         }
         
         @font-face {
             font-family: 'pfont';
-            src: url('Pfont-Regular.ttf');
+            src: url('JameJam-Regular.woff');
             font-weight: 400;
         }
         
         @font-face {
             font-family: 'pfont';
-            src: url('Pfont-Semi-Bold.ttf');
-            font-weight: 600;
+            src: url('JameJam-bold.woff');
+            font-weight: 700;
         }
         
         p {
@@ -71,15 +76,16 @@
 </head>
 <div id="testWeight">
     <a href="#" class="bold">‌Bold</a>
-    <a href="#" class="Semi-bold">‌Semi Bold</a>
     <a href="#" class="Regular">Regular</a>
+    <a href="#" class="Light">Light</a>
+    <a href="#" class="Elight">Extra Light</a>
     <input type="number" id="num" value=24></input>
-    <a href="index2.html" class="">تست فونت جام جم</a>
+    <a href="index.html" >تست فونت پی فونت</a>
 </div>
 <h1>این صفحه از نسخه غیر استیل فونت استفاده می‌کند و مشکلات زیادی دارد</h1>
 
 <body contenteditable="false">
-       <section class="sample">
+        <section class="sample">
             <h2>تست کاهش و افزایش وزن در فونت فارسی</h2>
             <p class="first">
 ء ا اأ أ إ إ آ آ ٱ ٱ ببب ب پپپ پ تتت ت ثثث ث ججج ج چچچ چ ححح ح خخخ خ
@@ -393,8 +399,13 @@
         return false;
     });
 
-    $('#testWeight .Semi-bold').on('click', function(){
-        $('.sample p').css('font-weight',600);
+    $('#testWeight .Light').on('click', function(){
+        $('.sample p').css('font-weight',300);
+        return false;
+    });
+    
+    $('#testWeight .ELight').on('click', function(){
+        $('.sample p').css('font-weight',200);
         return false;
     });
     
